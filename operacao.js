@@ -1,6 +1,6 @@
 
 let minhaConta = new Conta("Professor Isidro","123.456.789-00",1001,2,1000);
-let outraConta = new Conta("Jose de Anchieta","987.654.321-00",1003,4,5000);
+let outraConta = new ContaEspecial("Jose de Anchieta","987.654.321-00",1003,4,1000,1000);
 
 // funcoes lá dos botoes
 function depositarNaConta(){
@@ -18,10 +18,10 @@ function sacarDaConta(){
     else{
         alert("ERRO: Saldo Insuficiente!");
     }
+    console.log(outraConta.consultarSaldo());
     exibirInfoNaPagina();
 }
 
 function exibirInfoNaPagina(){
     document.getElementById("info").innerHTML = outraConta.exibirInfo();
-    //console.log(minhaConta.exibirInfo());
 }
